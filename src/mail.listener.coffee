@@ -57,7 +57,7 @@ class MailListener extends EventEmitter
           params.markSeen = true
         @imap.fetch searchResults, params, 
           headers:
-            parse: true
+            parse: false
           body: true  
           cb: (fetch) =>
             # 6. email was fetched. Parse it!   
